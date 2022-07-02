@@ -16,7 +16,8 @@ export default function AddScreen({ navigation }) {
     ></TextInput>
     <View style={styles.buttons}>
       <TouchableOpacity
-        onPress={() => navigation.goBack()}
+        //onPress={() => navigation.goBack()}
+        onPress={() => navigation.navigate('Notes', { text })}
         style={[styles.button, styles.submitButton]}
       >
         <Text style={styles.buttonText}>Submit</Text>
@@ -41,32 +42,36 @@ export default function AddScreen({ navigation }) {
 
 const styles = StyleSheet.create({
     label: {
-      fontWeight: "bold",
-      fontSize: 24,
+        color: 'blue',
+        fontWeight: "bold",
+        fontSize: 24,
     },
     textInput: {
-      margin: 20,
-      borderWidth: 1,
-      width: "80%",
-      padding: 10,
-      borderColor: "#ccc",
+        margin: 20,
+        borderWidth: 1,
+        width: "80%",
+        padding: 10,
+        borderColor: "#ccc",
+        borderRadius: 10,
     },
     buttons: {
-      flexDirection: "row",
+        flexDirection: "row",
     },
     button: {
-      padding: 10,
-      margin: 5,
+        padding: 10,
+        margin: 5,
     },
     buttonText: {
-      fontWeight: "bold",
-      color: "white",
+        fontWeight: "bold",
+        color: "white",
     },
     submitButton: {
-      backgroundColor: "orange",
+        borderRadius: 5,
+        backgroundColor: "lightblue",
     },
     cancelButton: {
-      backgroundColor: "red",
+        borderRadius: 5,
+        backgroundColor: "blue",
     },
    });
    
